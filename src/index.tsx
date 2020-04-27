@@ -30,6 +30,7 @@ const RIGHT_ENABLE = {
 
 };
 
+// 表内容，建表
 const tableIndexs = [
   { name: 'name', keyPath: 'name', options: { unique: true } },
   { name: 'img', keyPath: 'img', options: { unique: false } },
@@ -37,6 +38,7 @@ const tableIndexs = [
 ];
 
 export default function Index() {
+  // tableIndexs 表数据展示类型，必输情况
   useEffect(() => {
     initDB('test', 'templates', { autoIncrement: true },
       tableIndexs);
